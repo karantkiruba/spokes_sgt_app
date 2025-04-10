@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include spokes_sgt_app *.css
+recursive-include spokes_sgt_app *.csv
+recursive-include spokes_sgt_app *.html
+recursive-include spokes_sgt_app *.ico
+recursive-include spokes_sgt_app *.js
+recursive-include spokes_sgt_app *.json
+recursive-include spokes_sgt_app *.md
+recursive-include spokes_sgt_app *.png
+recursive-include spokes_sgt_app *.py
+recursive-include spokes_sgt_app *.svg
+recursive-include spokes_sgt_app *.txt
+recursive-exclude spokes_sgt_app *.pyc
