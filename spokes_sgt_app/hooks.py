@@ -27,6 +27,11 @@ doc_events = {
 	}
 }
 
+fixtures = [
+	{"dt": "Custom Field","filters": [["module", "=", "spokes_sgt_app"]]},
+	{"dt": "Client Script","filters": [["module", "=", "spokes_sgt_app"]]},
+	{"dt": "Server Script","filters": [["module", "=", "spokes_sgt_app"]]}
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/spokes_sgt_app/css/spokes_sgt_app.css"
