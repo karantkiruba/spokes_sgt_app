@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-05 13:36:09.380376",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "server_name",
+  "server_ip",
+  "server_space",
+  "usage",
+  "available_in_per",
+  "actual_space"
+ ],
+ "fields": [
+  {
+   "fieldname": "server_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Server Name",
+   "options": "ERP Server",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "server_name.server_ip",
+   "fieldname": "server_ip",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Server IP",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "server_name.server_space",
+   "fieldname": "server_space",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Server Space (GB)",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Usage In %",
+   "reqd": 1
+  },
+  {
+   "fieldname": "available_in_per",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Available In %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_space",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Available Space (GB)",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-05 18:10:21.998616",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "Server Audit Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

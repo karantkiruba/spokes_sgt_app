@@ -14,6 +14,20 @@ app_license = "MIT"
 # app_include_css = "/assets/spokes_sgt_app/css/spokes_sgt_app.css"
 # app_include_js = "/assets/spokes_sgt_app/js/spokes_sgt_app.js"
 
+doc_events = {
+	"Sales Invoice":{
+		"validate":"spokes_sgt_app.custom_script.add_tax_breakup"
+	},
+	"Delivery Challan":{
+		"on_submit":"spokes_sgt_app.custom_script.deliverychallansubmit"
+	},
+	"Purchase Receipt":{
+		"on_submit": "spokes_sgt_app.custom_script.updatedcinwqty",
+		"on_cancel": "spokes_sgt_app.custom_script.cancelpurchasereceipt"
+	}
+}
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/spokes_sgt_app/css/spokes_sgt_app.css"
 # web_include_js = "/assets/spokes_sgt_app/js/spokes_sgt_app.js"

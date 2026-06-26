@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-22 15:58:08.752557",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "supplier",
+  "supplier_name",
+  "address",
+  "source_warehouse",
+  "target_warehouse",
+  "column_break_q2gl0",
+  "company",
+  "date",
+  "mode_of_freight",
+  "dc_no",
+  "dc_date",
+  "mode_of_transport",
+  "section_break_p0kzu",
+  "items",
+  "section_break_mvuzo",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "supplier.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "supplier.target_warehouse",
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_q2gl0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "dc_no",
+   "fieldtype": "Data",
+   "label": "DC No"
+  },
+  {
+   "fieldname": "mode_of_freight",
+   "fieldtype": "Link",
+   "label": "Mode Of Freight",
+   "options": "Mode Of Freight"
+  },
+  {
+   "fieldname": "mode_of_transport",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Mode of Transport",
+   "options": "Mode of Transport"
+  },
+  {
+   "fieldname": "dc_date",
+   "fieldtype": "Date",
+   "label": "DC Date"
+  },
+  {
+   "fieldname": "section_break_p0kzu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_mvuzo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Delivery Challan Item",
+   "options": "Delivery Challan Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-22 18:27:46.447004",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "Delivery Challan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

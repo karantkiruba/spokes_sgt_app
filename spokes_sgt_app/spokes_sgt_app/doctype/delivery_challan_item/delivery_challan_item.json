@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-22 15:53:26.256053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "description",
+  "qty",
+  "rate",
+  "amount",
+  "nature_of_work",
+  "remarks",
+  "item_name",
+  "uom",
+  "type_of_goods",
+  "inward_qty",
+  "is_stock"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.description",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nature_of_work",
+   "fieldtype": "Data",
+   "label": "Nature of Work"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "type_of_goods",
+   "fieldtype": "Select",
+   "label": "Type of Goods",
+   "options": "Inputs\nCapital Goods"
+  },
+  {
+   "fieldname": "inward_qty",
+   "fieldtype": "Data",
+   "label": "Inward Qty"
+  },
+  {
+   "default": "0",
+   "fetch_from": "item_code.is_stock_item",
+   "fieldname": "is_stock",
+   "fieldtype": "Check",
+   "label": "Is Stock",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-22 17:30:08.801739",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "Delivery Challan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

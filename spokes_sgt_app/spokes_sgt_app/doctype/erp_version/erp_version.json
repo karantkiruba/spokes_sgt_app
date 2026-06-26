@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-10-30 11:37:05.449084",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "upgrade_date",
+  "project",
+  "expected_start_date",
+  "expected_end_date",
+  "actual_start_date",
+  "actual_end_date",
+  "column_break0",
+  "status",
+  "server_ip",
+  "bench_name",
+  "app_url",
+  "maintained_by",
+  "name1",
+  "checked_by",
+  "checked_by_name",
+  "remarks",
+  "section_break_9xmiv",
+  "erp_version_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "unique": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "upgrade_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Doc Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Not Yet Started\nPlanned\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "maintained_by",
+   "fieldtype": "Link",
+   "label": "Upgraded By",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "maintained_by.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ERP Version",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "erp_version_details",
+   "fieldtype": "Table",
+   "label": "ERP Version Details",
+   "options": "ERP Version Details"
+  },
+  {
+   "default": "ERPV-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ERPV-.####"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Date",
+   "label": "Actual Start Date"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date"
+  },
+  {
+   "fieldname": "column_break0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9xmiv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "checked_by.employee_name",
+   "fieldname": "checked_by_name",
+   "fieldtype": "Data",
+   "label": "Checked By Name"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Checked By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "app_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "App URL"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "server_ip",
+   "fieldtype": "Data",
+   "label": "Server IP"
+  },
+  {
+   "fieldname": "bench_name",
+   "fieldtype": "Data",
+   "label": "Bench Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-31 11:15:38.302360",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "ERP Version",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-11-05 13:29:09.965222",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "doc_date",
+  "checked_by",
+  "checked_by_name",
+  "approved_by",
+  "approved_by_name",
+  "server_audit_detail",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "doc_date",
+   "fieldtype": "Date",
+   "label": "Doc Date"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ERP Server Audit",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "server_audit_detail",
+   "fieldtype": "Table",
+   "label": "Server Audit Detail",
+   "options": "Server Audit Detail"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series"
+  },
+  {
+   "fetch_from": "checked_by.employee_name",
+   "fieldname": "checked_by_name",
+   "fieldtype": "Data",
+   "label": "Created By Name"
+  },
+  {
+   "fetch_from": "approved_by.employee_name",
+   "fieldname": "approved_by_name",
+   "fieldtype": "Data",
+   "label": "Approved By Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-05 15:51:28.373827",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "ERP Server Audit",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

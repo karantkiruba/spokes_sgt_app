@@ -1,0 +1,30 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-10-30 13:15:25.665677",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2025-10-30 17:23:23.230276",
+ "modified_by": "Administrator",
+ "module": "spokes_sgt_app",
+ "name": "ERP Version Detail",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n    cev.name AS \"Doc No:Link/ERP Version:120\",\r\n    cev.upgrade_date AS \"Doc Date:Date:120\",\r\n    cev.customer AS \"Customer:Link/Customer:150\",\r\n    evd.erp_component AS \"ERP Component:Link/ERP Component:200\",\r\n    evd.current_version AS \"Current Version::120\",\r\n    evd.upgrade_version AS \"Upgrade Version::120\",\r\n    cev.status AS \"Status::100\",\r\n    cev.expected_start_date AS \"Exp Start Date:Date:120\",\r\n    cev.expected_end_date AS \"Exp End Date:Date:120\",\r\n    cev.actual_start_date AS \"Act Start Date:Date:120\",\r\n    cev.actual_end_date AS \"Act End Date:Date:120\",\r\n    \r\n    cev.maintained_by AS \"Upgraded By:Link/Employee:150\",\r\n    cev.name1 AS \"Name\",\r\n    cev.checked_by AS \"Checked By:Link/Employee:150\",\r\n    cev.checked_by_name as  \"Checked By Name\"\r\nFROM\r\n    `tabERP Version` cev\r\nJOIN\r\n    `tabERP Version Details` evd\r\nON\r\n    evd.parent = cev.name\r\nORDER BY\r\n    cev.customer, evd.erp_component;\r\n",
+ "ref_doctype": "ERP Version",
+ "report_name": "ERP Version Detail",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "ERP Version"
+  }
+ ]
+}
